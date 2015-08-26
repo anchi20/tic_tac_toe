@@ -1,0 +1,828 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My Tic Tac Toe</title>
+
+
+<script src="jquery-1.8.0.min.js">
+</script>
+
+
+<script>
+
+ 
+$(document).ready (function ()
+  			{ 
+	            var t=0;
+				var s1=0,s2=0,s3=0;s4=0,s5=0,s6=0,s7=0,s8=0,s9=0;
+		 		var a="1",a2="1",a3="1",a4="1",a5="1",a6="1",a7="1",a8="1",a9="1";
+			
+			
+				
+				
+		   $("#div1").hover(function()
+		    	{
+        				document.getElementById("div1").style.opacity=".8";
+			    		 if (t==0 && s1==0)
+					{    document.getElementById("div1").innerHTML="x";    }
+					else if (t==1 && s1==0)
+			 		{    document.getElementById("div1").innerHTML="0";    }
+				
+				},
+	
+			$("#div1").hover(function()
+		    	{
+        			if(s1==0)
+					{
+						document.getElementById("div1").style.opacity="1";
+						document.getElementById("div1").innerHTML="";
+					}
+				}
+				
+				));
+				
+				$("#div1").click(function()
+		    	{
+        		 		 document.getElementById("div1").style.color="red";
+						 if (t==0 && s1==0)
+						{   document.getElementById("div1").innerHTML="x";  t=1; a1="x";}
+					else if (t==1 && s1==0)
+						{   document.getElementById("div1").innerHTML="0";  t=0; a1="0";}
+					
+						s1=1;
+						
+					if((a1=="x" && a2=="x" && a3=="x") ||(a1=="0" && a2=="0" && a3=="0") 
+					|| (a1=="x" && a4=="x" && a7=="x") ||(a1=="0" && a4=="0" && a7=="0") )
+						{
+							
+							if(a1=="x")
+							alert(" X is winner ");
+							else if(a1=="0")
+							alert(" 0 is winner ");
+							a1="stop";
+							location.reload(true);
+							/*$.ajax({
+								url:"",
+								context:document.body,
+								success: function(s,x)
+								{
+									$(this).html(s)
+								}
+							});*/
+							//window.location.reload();
+						}
+
+
+
+
+						else if((a4=="x" && a5=="x" && a6=="x") ||(a4=="0" && a5=="0" && a6=="0")
+						||(a2=="x" && a5=="x" && a8=="x") ||(a2=="0" && a5=="0" && a8=="0") )
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+							
+						else if((a1=="x" && a5=="x" && a9=="x") ||(a1=="0" && a5=="0" && a9=="0")
+						||(a3=="x" && a5=="x" && a7=="x") ||(a3=="0" && a5=="0" && a7=="0"))
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+				  else if((a3=="x" && a6=="x" && a9=="x") ||(a3=="0" && a6=="0" && a9=="0") 
+					||(a7=="x" && a8=="x" && a9=="x") ||(a7=="0" && a8=="0" && a9=="0") )
+						{
+							if(a9=="x")
+							alert(" X is winner ");
+							else if(a9=="0")
+							alert(" 0 is winner ");
+							a9="stop";
+							location.reload(true);
+						}		
+				
+				});
+				
+		
+		
+		$("#div2").hover(function()
+		    	{
+        				document.getElementById("div2").style.opacity=".8";
+			   			 if (t==0&& s2==0)
+						{    document.getElementById("div2").innerHTML="x";    }
+					else if (t==1 && s2==0)
+						{    document.getElementById("div2").innerHTML="0";    }
+				
+				},
+			$("#div2").hover(function()
+		    	{
+        				if(s2==0)
+						{
+							document.getElementById("div2").style.opacity="1";
+							document.getElementById("div2").innerHTML="";
+						}
+				}
+				));
+				
+				$("#div2").click(function()
+		    	{
+        				 document.getElementById("div2").style.color="red"; 
+			        	 if (t==0 && s2==0)
+						{   document.getElementById("div2").innerHTML="x";   t=1; a2="x";}
+					else if (t==1 && s2==0)
+						{   document.getElementById("div2").innerHTML="0";  t=0;  a2="0"; }
+				   
+					  	 s2=1;
+						 if((a1=="x" && a2=="x" && a3=="x") ||(a1=="0" && a2=="0" && a3=="0") 
+					||(a1=="x" && a4=="x" && a7=="x") ||(a1=="0" && a4=="0" && a7=="0") )
+						{
+							if(a1=="x")
+							alert(" X is winner ");
+							else if(a1=="0")
+							alert(" 0 is winner ");
+							a1="stop";
+							location.reload(true);
+						}  
+						
+						else if((a4=="x" && a5=="x" && a6=="x") ||(a4=="0" && a5=="0" && a6=="0")
+						||(a2=="x" && a5=="x" && a8=="x") ||(a2=="0" && a5=="0" && a8=="0") )
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+							
+						else if((a1=="x" && a5=="x" && a9=="x") ||(a1=="0" && a5=="0" && a9=="0")
+						||(a3=="x" && a5=="x" && a7=="x") ||(a3=="0" && a5=="0" && a7=="0"))
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						 else if((a3=="x" && a6=="x" && a9=="x") ||(a3=="0" && a6=="0" && a9=="0") 
+					||(a7=="x" && a8=="x" && a9=="x") ||(a7=="0" && a8=="0" && a9=="0") )
+						{
+							if(a9=="x")
+							alert(" X is winner ");
+							else if(a9=="0")
+							alert(" 0 is winner ");
+							a9="stop";
+							location.reload(true);
+						}
+				});
+				
+		
+		$("#div3").hover(function()
+		    	{
+        				document.getElementById("div3").style.opacity=".8";
+			   			 if (t==0 && s3==0)
+						{    document.getElementById("div3").innerHTML="x";    }
+					else if (t==1 && s3==0)
+						{    document.getElementById("div3").innerHTML="0";    }
+				
+				},
+			$("#div3").hover(function()
+		    	{
+        				if(s3==0)
+						{
+							document.getElementById("div3").style.opacity="1";
+							document.getElementById("div3").innerHTML="";
+						}
+				}
+				));
+				
+				$("#div3").click(function()
+		    	{
+        				 document.getElementById("div3").style.color="red"; 
+			        	 if (t==0 && s3==0)
+						{   document.getElementById("div3").innerHTML="x";   t=1;a3="x"; }
+					else if (t==1 && s3==0)
+						{   document.getElementById("div3").innerHTML="0";  t=0; a3="0"; }
+				   
+					  	 s3=1;
+						 
+						 if((a1=="x" && a2=="x" && a3=="x") ||(a1=="0" && a2=="0" && a3=="0") 
+					||(a1=="x" && a4=="x" && a7=="x") ||(a1=="0" && a4=="0" && a7=="0") )
+						{
+							if(a1=="x")
+							alert(" X is winner ");
+							else if(a1=="0")
+							alert(" 0 is winner ");
+							a1="stop";
+							location.reload(true);
+						}     
+						
+						else if((a4=="x" && a5=="x" && a6=="x") ||(a4=="0" && a5=="0" && a6=="0")
+						||(a2=="x" && a5=="x" && a8=="x") ||(a2=="0" && a5=="0" && a8=="0") )
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+							
+						else if((a1=="x" && a5=="x" && a9=="x") ||(a1=="0" && a5=="0" && a9=="0")
+						||(a3=="x" && a5=="x" && a7=="x") ||(a3=="0" && a5=="0" && a7=="0"))
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+						  else if((a3=="x" && a6=="x" && a9=="x") ||(a3=="0" && a6=="0" && a9=="0") 
+					||(a7=="x" && a8=="x" && a9=="x") ||(a7=="0" && a8=="0" && a9=="0") )
+						{
+							if(a9=="x")
+							alert(" X is winner ");
+							else if(a9=="0")
+							alert(" 0 is winner ");
+							a9="stop";
+							location.reload(true);
+						}
+				});
+		
+		$("#div4").hover(function()
+		    	{
+        				document.getElementById("div4").style.opacity=".8";
+			   			 if (t==0&& s4==0)
+						{    document.getElementById("div4").innerHTML="x";    }
+					else if (t==1 && s4==0)
+						{    document.getElementById("div4").innerHTML="0";    }
+				
+				},
+			$("#div4").hover(function()
+		    	{
+        				if(s4==0)
+						{
+							document.getElementById("div4").style.opacity="1";
+							document.getElementById("div4").innerHTML="";
+						}
+				}
+				));
+				
+				$("#div4").click(function()
+		    	{
+        				 document.getElementById("div4").style.color="red"; 
+			        	 if (t==0 && s4==0)
+						{   document.getElementById("div4").innerHTML="x";   t=1;a4="x";}
+					else if (t==1 && s4==0)
+						{   document.getElementById("div4").innerHTML="0";  t=0; a4="0";  }
+				   
+					  	 s4=1;
+						 if((a1=="x" && a2=="x" && a3=="x") ||(a1=="0" && a2=="0" && a3=="0") 
+					||(a1=="x" && a4=="x" && a7=="x") ||(a1=="0" && a4=="0" && a7=="0") )
+						{
+							if(a1=="x")
+							alert(" X is winner ");
+							else if(a1=="0")
+							alert(" 0 is winner ");
+							a1="stop";
+							location.reload(true);
+						}  
+						  
+						
+						else if((a4=="x" && a5=="x" && a6=="x") ||(a4=="0" && a5=="0" && a6=="0")
+						||(a2=="x" && a5=="x" && a8=="x") ||(a2=="0" && a5=="0" && a8=="0") )
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+							
+						else if((a1=="x" && a5=="x" && a9=="x") ||(a1=="0" && a5=="0" && a9=="0")
+						||(a3=="x" && a5=="x" && a7=="x") ||(a3=="0" && a5=="0" && a7=="0"))
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+						 else if((a3=="x" && a6=="x" && a9=="x") ||(a3=="0" && a6=="0" && a9=="0") 
+					||(a7=="x" && a8=="x" && a9=="x") ||(a7=="0" && a8=="0" && a9=="0") )
+						{
+							if(a9=="x")
+							alert(" X is winner ");
+							else if(a9=="0")
+							alert(" 0 is winner ");
+							a9="stop";
+							location.reload(true);
+						}
+				});
+		
+		
+		$("#div5").hover(function()
+		    	{
+        				document.getElementById("div5").style.opacity=".8";
+			   			 if (t==0 && s5==0)
+						{    document.getElementById("div5").innerHTML="x";    }
+					else if (t==1 && s5==0)
+						{    document.getElementById("div5").innerHTML="0";    }
+				
+				},
+			$("#div5").hover(function()
+		    	{
+        				if(s5==0)
+						{
+							document.getElementById("div5").style.opacity="1";
+							document.getElementById("div5").innerHTML="";
+						}
+				}
+				));
+				
+				$("#div5").click(function()
+		    	{
+        				 document.getElementById("div5").style.color="red"; 
+			        	 if (t==0 && s5==0)
+						{   document.getElementById("div5").innerHTML="x";   t=1; a5="x";}
+					else if (t==1 && s5==0)
+						{   document.getElementById("div5").innerHTML="0";  t=0;  a5="0";}
+				   
+					  	 s5=1;
+						 if((a1=="x" && a2=="x" && a3=="x") ||(a1=="0" && a2=="0" && a3=="0") 
+					||(a1=="x" && a4=="x" && a7=="x") ||(a1=="0" && a4=="0" && a7=="0") )
+						{
+							if(a1=="x")
+							alert(" X is winner ");
+							else if(a1=="0")
+							alert(" 0 is winner ");
+							a1="stop";
+							location.reload(true);
+						}  
+						  
+						
+						else if((a4=="x" && a5=="x" && a6=="x") ||(a4=="0" && a5=="0" && a6=="0")
+						||(a2=="x" && a5=="x" && a8=="x") ||(a2=="0" && a5=="0" && a8=="0") )
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+							
+						else if((a1=="x" && a5=="x" && a9=="x") ||(a1=="0" && a5=="0" && a9=="0")
+						||(a3=="x" && a5=="x" && a7=="x") ||(a3=="0" && a5=="0" && a7=="0"))
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+						  else if((a3=="x" && a6=="x" && a9=="x") ||(a3=="0" && a6=="0" && a9=="0") 
+					||(a7=="x" && a8=="x" && a9=="x") ||(a7=="0" && a8=="0" && a9=="0") )
+						{
+							if(a9=="x")
+							alert(" X is winner ");
+							else if(a9=="0")
+							alert(" 0 is winner ");
+							a9="stop";
+							location.reload(true);
+						}
+				});
+		
+		
+		$("#div6").hover(function()
+		    	{
+        				document.getElementById("div6").style.opacity=".8";
+			   			 if (t==0 && s6==0)
+						{    document.getElementById("div6").innerHTML="x";    }
+					else if (t==1 && s6==0)
+						{    document.getElementById("div6").innerHTML="0";    }
+				
+				},
+			$("#div6").hover(function()
+		    	{
+        				if(s6==0)
+						{
+							document.getElementById("div6").style.opacity="1";
+							document.getElementById("div6").innerHTML="";
+						}
+				}
+				));
+				
+				$("#div6").click(function()
+		    	{
+        				 document.getElementById("div6").style.color="red"; 
+			        	 if (t==0 && s6==0)
+						{   document.getElementById("div6").innerHTML="x";   t=1;a6="x";}
+					else if (t==1 && s6==0)
+						{   document.getElementById("div6").innerHTML="0";  t=0; a6="0";  }
+				   
+					  	 s6=1;
+						 if((a1=="x" && a2=="x" && a3=="x") ||(a1=="0" && a2=="0" && a3=="0") 
+					||(a1=="x" && a4=="x" && a7=="x") ||(a1=="0" && a4=="0" && a7=="0") )
+						{
+							if(a1=="x")
+							alert(" X is winner ");
+							else if(a1=="0")
+							alert(" 0 is winner ");
+							a1="stop";
+							location.reload(true);
+						}  
+						
+						  
+						
+						else if((a4=="x" && a5=="x" && a6=="x") ||(a4=="0" && a5=="0" && a6=="0")
+						||(a2=="x" && a5=="x" && a8=="x") ||(a2=="0" && a5=="0" && a8=="0") )
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+							
+						else if((a1=="x" && a5=="x" && a9=="x") ||(a1=="0" && a5=="0" && a9=="0")
+						||(a3=="x" && a5=="x" && a7=="x") ||(a3=="0" && a5=="0" && a7=="0"))
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+						 else if((a3=="x" && a6=="x" && a9=="x") ||(a3=="0" && a6=="0" && a9=="0") 
+					||(a7=="x" && a8=="x" && a9=="x") ||(a7=="0" && a8=="0" && a9=="0") )
+						{
+							if(a9=="x")
+							alert(" X is winner ");
+							else if(a9=="0")
+							alert(" 0 is winner ");
+							a9="stop";
+							location.reload(true);
+						}
+				});
+		
+		
+		$("#div7").hover(function()
+		    	{
+        				document.getElementById("div7").style.opacity=".8";
+			   			 if (t==0 && s7==0)
+						{    document.getElementById("div7").innerHTML="x";    }
+					else if (t==1 && s7==0)
+						{    document.getElementById("div7").innerHTML="0";    }
+				
+				},
+			$("#div7").hover(function()
+		    	{
+        				if(s7==0)
+						{
+							document.getElementById("div7").style.opacity="1";
+							document.getElementById("div7").innerHTML="";
+						}
+				}
+				));
+				
+				$("#div7").click(function()
+		    	{
+        				 document.getElementById("div7").style.color="red"; 
+			        	 if (t==0 && s7==0)
+						{   document.getElementById("div7").innerHTML="x";   t=1;a7="x";}
+					else if (t==1 && s7==0)
+						{   document.getElementById("div7").innerHTML="0";  t=0; a7="0";  }
+				   
+					  	 s7=1;
+						 if((a1=="x" && a2=="x" && a3=="x") ||(a1=="0" && a2=="0" && a3=="0") 
+					||(a1=="x" && a4=="x" && a7=="x") ||(a1=="0" && a4=="0" && a7=="0") )
+						{
+							if(a1=="x")
+							alert(" X is winner ");
+							else if(a1=="0")
+							alert(" 0 is winner ");
+							a1="stop";
+							location.reload(true);
+						}    
+						
+						else if((a4=="x" && a5=="x" && a6=="x") ||(a4=="0" && a5=="0" && a6=="0")
+						||(a2=="x" && a5=="x" && a8=="x") ||(a2=="0" && a5=="0" && a8=="0") )
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+							
+						else if((a1=="x" && a5=="x" && a9=="x") ||(a1=="0" && a5=="0" && a9=="0")
+						||(a3=="x" && a5=="x" && a7=="x") ||(a3=="0" && a5=="0" && a7=="0"))
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+						  else if((a3=="x" && a6=="x" && a9=="x") ||(a3=="0" && a6=="0" && a9=="0") 
+					||(a7=="x" && a8=="x" && a9=="x") ||(a7=="0" && a8=="0" && a9=="0") )
+						{
+							if(a9=="x")
+							alert(" X is winner ");
+							else if(a9=="0")
+							alert(" 0 is winner ");
+							a9="stop";
+							location.reload(true);
+						}
+				});
+		
+		
+		$("#div8").hover(function()
+		    	{
+        				document.getElementById("div8").style.opacity=".8";
+			   			 if (t==0 && s8==0)
+						{    document.getElementById("div8").innerHTML="x";    }
+					else if (t==1 && s8==0)
+						{    document.getElementById("div8").innerHTML="0";    }
+				
+				},
+			$("#div8").hover(function()
+		    	{
+        				if(s8==0)
+						{
+							document.getElementById("div8").style.opacity="1";
+							document.getElementById("div8").innerHTML="";
+						}
+				}
+				));
+				
+				$("#div8").click(function()
+		    	{
+        				 document.getElementById("div8").style.color="red"; 
+			        	 if (t==0 && s8==0)
+						{   document.getElementById("div8").innerHTML="x";   t=1; a8="x";}
+					else if (t==1 && s8==0)
+						{   document.getElementById("div8").innerHTML="0";  t=0;  a8="0"; }
+				   
+					  	 s8=1;
+						 if((a1=="x" && a2=="x" && a3=="x") ||(a1=="0" && a2=="0" && a3=="0") 
+					||(a1=="x" && a4=="x" && a7=="x") ||(a1=="0" && a4=="0" && a7=="0") )
+						{
+							if(a1=="x")
+							alert(" X is winner ");
+							else if(a1=="0")
+							alert(" 0 is winner ");
+							a1="stop";
+							location.reload(true);
+						}  
+						
+						   
+						
+						else if((a4=="x" && a5=="x" && a6=="x") ||(a4=="0" && a5=="0" && a6=="0")
+						||(a2=="x" && a5=="x" && a8=="x") ||(a2=="0" && a5=="0" && a8=="0") )
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+							
+						else if((a1=="x" && a5=="x" && a9=="x") ||(a1=="0" && a5=="0" && a9=="0")
+						||(a3=="x" && a5=="x" && a7=="x") ||(a3=="0" && a5=="0" && a7=="0"))
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+						else if((a3=="x" && a6=="x" && a9=="x") ||(a3=="0" && a6=="0" && a9=="0") 
+					||(a7=="x" && a8=="x" && a9=="x") ||(a7=="0" && a8=="0" && a9=="0") )
+						{
+							if(a9=="x")
+							alert(" X is winner ");
+							else if(a9=="0")
+							alert(" 0 is winner ");
+							a9="stop";
+							location.reload(true);
+						}
+				});
+		
+		
+		
+		$("#div9").hover(function()
+		    	{
+        				document.getElementById("div9").style.opacity=".8";
+			   			 if (t==0 && s9==0)
+						{    document.getElementById("div9").innerHTML="x";    }
+					else if (t==1 && s9==0)
+						{    document.getElementById("div9").innerHTML="0";    }
+				
+				},
+			$("#div9").hover(function()
+		    	{
+        				if(s9==0)
+						{
+							document.getElementById("div9").style.opacity="1";
+							document.getElementById("div9").innerHTML="";
+						}
+				}
+				));
+				
+				$("#div9").click(function()
+		    	{
+        				 document.getElementById("div9").style.color="red"; 
+			        	 if (t==0 && s9==0)
+						{   document.getElementById("div9").innerHTML="x";   t=1;a9="x";}
+					else if (t==1 && s9==0)
+						{   document.getElementById("div9").innerHTML="0";  t=0; a9="0";  }
+				   
+					  	 s9=1;
+						 if((a1=="x" && a2=="x" && a3=="x") ||(a1=="0" && a2=="0" && a3=="0") 
+					||(a1=="x" && a4=="x" && a7=="x") ||(a1=="0" && a4=="0" && a7=="0") )
+						{
+							if(a1=="x")
+							alert(" X is winner ");
+							else if(a1=="0")
+							alert(" 0 is winner ");
+							a1="stop";
+							location.reload(true);
+						}  
+						   
+						
+						else if((a4=="x" && a5=="x" && a6=="x") ||(a4=="0" && a5=="0" && a6=="0")
+						||(a2=="x" && a5=="x" && a8=="x") ||(a2=="0" && a5=="0" && a8=="0") )
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						
+							
+						else if((a1=="x" && a5=="x" && a9=="x") ||(a1=="0" && a5=="0" && a9=="0")
+						||(a3=="x" && a5=="x" && a7=="x") ||(a3=="0" && a5=="0" && a7=="0"))
+						{
+							alert(" inside med ");
+							if(a5=="x")
+							alert(" X is winner ");
+							else if(a5=="0")
+							alert(" 0 is winner ");
+							a5="stop";
+							location.reload(true);
+						}
+						 
+							 else if((a3=="x" && a6=="x" && a9=="x") ||(a3=="0" && a6=="0" && a9=="0") 
+					||(a7=="x" && a8=="x" && a9=="x") ||(a7=="0" && a8=="0" && a9=="0") )
+						{
+							if(a9=="x")
+							alert(" X is winner ");
+							else if(a9=="0")
+							alert(" 0 is winner ");
+							a9="stop";
+							location.reload(true);
+						}
+				});
+		
+		
+			});
+
+</script>
+
+
+<style type="text/css">
+
+.class1 
+	{
+		width:150px; height:150px;
+		border-radius:35px;
+		margin:10px;
+		float:left;
+		font-family:"Comic Sans MS", cursive;
+		font-size:90px;
+		
+	}
+
+#maindivinner 
+	{
+		width:510px; height:510px;
+		background-color:#000;
+		border-radius:10px;
+		
+	}
+#maindivouter
+	{
+		width:530px; height:520px;
+	    background-color:#666; 
+		border-radius:60px;
+		padding-top:10px;
+	}
+	
+#div1	{	 background-color:#CCC;	}	
+#div2	{	background-color:#FFFF00;  }
+#div3	{	 background-color:#CCC;	}
+
+#div4	{	background-color:#FFFF00;  }
+#div5	{	 background-color:#CCC;	}	
+#div6	{	background-color:#FFFF00;  }
+
+#div7	{	 background-color:#CCC;	}	
+#div8	{	background-color:#FFFF00;  }
+#div9	{	 background-color:#CCC;	}
+
+
+		
+</style>
+
+</head>
+
+<body >
+<div align="center" style="padding-top:60px;">
+    <div id="maindivouter"  align="center">
+       <div id="maindivinner">
+    
+         <div class="class1" id="div1" align="center" >
+   		 </div>
+       <!--  <img src="animal_0009.jpg"  width="10px" height="800px"  />  -->    
+
+   		 <div class="class1" id="div2" align="center" >
+   		 </div>
+         <div class="class1" id="div3" align="center" >
+   		 </div>
+         
+         
+         <div class="class1" id="div4" align="center" >
+   		 </div>
+   		 <div class="class1" id="div5" align="center" >
+   		 </div>
+         <div class="class1" id="div6" align="center" >
+   		 </div>
+         
+         
+		 <div class="class1" id="div7" align="center" >
+   		 </div>
+   		 <div class="class1" id="div8" align="center" >
+   		 </div>
+         <div class="class1" id="div9" align="center" >
+   		 </div>
+       
+    </div>
+  </div>
+</div>	
+ 
+</body>
+</html>
